@@ -1,0 +1,21 @@
+---
+version: 3
+
+images:
+  base_image:
+    # name: quay.io/centos/centos:stream8
+    # name: quay.io/centos/centos:stream9
+    # name: registry.fedoraproject.org/fedora:38
+    # name: registry.access.redhat.com/ubi8/ubi:latest
+    name: registry.access.redhat.com/ubi9/ubi:latest
+
+options:
+  tags:
+    - 'ee_ubi9_minimum:latest'
+
+dependencies:
+  ansible_core:
+    package_pip: ansible-core==2.15.2
+
+  ansible_runner:
+    package_pip: ansible-runner==2.3.3
